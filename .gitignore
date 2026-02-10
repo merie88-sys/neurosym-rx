@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Data (NEVER commit raw datasets)
+data/raw/
+data/processed/
+
+# Figures (generated outputs)
+figures/
+*.png
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
