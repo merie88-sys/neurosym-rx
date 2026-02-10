@@ -26,9 +26,8 @@ def preprocess():
     df.to_csv(OUTPUT_PATH, index=False)
     
     print(f"✓ Raw interactions: {total:,}")
-    print(f"✓ After filtering (count≥5, mean_ratio≥1.5): {len(df):,}")
-    print(f"✓ High-severity (mean_ratio≥2.0): {df['label'].sum():,} ({df['label'].mean()*100:.1f}%)")
-    print(f"✅ Filtered dataset saved to: {OUTPUT_PATH}")
+    print(f"✓ After filtering: {len(df):,} high-confidence interactions")
+    print(f"✅ Saved to: {OUTPUT_PATH}")
 
 if __name__ == "__main__":
     preprocess()
