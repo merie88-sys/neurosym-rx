@@ -1,20 +1,13 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-venv/
-.env
-
-# Data (NEVER commit raw datasets)
+# Data (NEVER commit)
 data/raw/
 data/processed/
 
-# Figures (generated outputs)
+# Generated outputs
 figures/
 *.png
 *.pdf
 
-# OS
-.DS_Store
-Thumbs.db
+# Python
+__pycache__/
+*.pyc
+venv/
