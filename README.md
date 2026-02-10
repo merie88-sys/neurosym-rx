@@ -1,6 +1,13 @@
 # NeuroSym-Rx: Cascaded Neurosymbolic Fusion for Context-Aware Medication Safety
 
-Official implementation of NeuroSym-Rx, a temporal neurosymbolic framework for personalized drug interaction detection.
+Official implementation of NeuroSym-Rx...
+
+## 📝 Citation
+
+If you use this work, please cite:
+
+> Meriem KERMANI. (2026). NeuroSym-Rx: Cascaded Neurosymbolic Fusion for 
+> Context-Aware Medication Safety. Zenodo. DOI: 10.5281/zenodo.18598830
 
 ## 🚀 Quick Start
 
