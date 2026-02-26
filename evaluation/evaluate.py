@@ -9,7 +9,6 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import precision_recall_fscore_support
 from tqdm import tqdm
-# ⚠️ REPLACE WITH YOUR ACTUAL IMPLEMENTATION ⚠️
 # from src.neurosym_rx import NeuroSymRx
 
 def simulate_neurosym_prediction(drug1, drug2, context):
