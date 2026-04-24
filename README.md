@@ -16,7 +16,16 @@ If you use this work, please cite:
 git clone https://github.com/your-username/neurosym-rx.git
 cd neurosym-rx
 
-# 2. Install dependencies
+# 2. ## Installation
+
+Create a virtual environment and install dependencies:
+
+```bash
+python -m venv neurosym_env
+source neurosym_env/bin/activate  # Linux/Mac
+# OR
+neurosym_env\Scripts\activate    # Windows
+
 pip install -r requirements.txt
 
 # 3. Download TwoSIDES dataset (official source: nsides.io)
