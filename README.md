@@ -6,7 +6,7 @@ Implementation of NeuroSym-Rx, a temporal neurosymbolic framework that reduces a
 ## Dataset Information
 - **Name**: TwoSIDES
 - **Source**: Tatonetti Lab
-- **URL**: https://tatonettilab.org/resources/tatonetti-stm.html
+- **URL**:https://tatonettilab.org/resources/tatonetti-stm.html
 - **Filtering**: Interactions with count ≥5 and mean_ratio ≥1.5 (87,412 interactions)
 
 ## Code Information
