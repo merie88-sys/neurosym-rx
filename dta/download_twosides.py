@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Download TwoSIDES dataset from official Tatonetti Lab source
-Source: https://nsides.io/data/TWOSIDES.csv.gz
+Source: https://nsides.io/#offsides-and-twosides
 No redistribution — fetches directly from nsides.io
 
 Author: Anonymous (for double-blind review)
@@ -13,7 +13,7 @@ import shutil
 import os
 from tqdm import tqdm
 
-URL = "https://nsides.io/data/TWOSIDES.csv.gz"
+URL = "https://nsides.io/#offsides-and-twosides"
 RAW_DIR = "data/raw"
 RAW_PATH = f"{RAW_DIR}/TWOSIDES.csv.gz"
 CSV_PATH = f"{RAW_DIR}/TWOSIDES.csv"
