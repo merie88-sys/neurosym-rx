@@ -6,7 +6,7 @@ Implementation of NeuroSym-Rx, a temporal neurosymbolic framework that reduces a
 ## Dataset Information
 - **Name**: TwoSIDES
 - **Source**: Tatonetti Lab
-- **URL**: https://nsides.io/#offsides-and-twosides
+- **URL**: https://tatonettilab.org/resources/tatonetti-stm.html
 - **Filtering**: Interactions with count ≥5 and mean_ratio ≥1.5 (87,412 interactions)
 
 ## Code Information
@@ -18,7 +18,7 @@ Implementation of NeuroSym-Rx, a temporal neurosymbolic framework that reduces a
   - Clinically adaptive risk scoring
 
 ## Usage Instructions
-1. Download TwoSIDES from https://nsides.io/#offsides-and-twosides
+1. Download TwoSIDES from https://tatonettilab.org/resources/tatonetti-stm.html
 2. Run: `python evaluate_twosides_cv.py`
 3. Output: `figures/figure3_pr_curve.pdf`, `figures/figure4_roc_curve.pdf`
 
