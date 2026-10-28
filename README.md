@@ -1,36 +1,36 @@
 # NeuroSym-Rx: Temporal Neurosymbolic Fusion for Context-Aware Medication Safety
 
 ## Description
-Implementation of NeuroSym-Rx, a temporal neurosymbolic framework that reduces alert fatigue in clinical decision support systems by integrating dynamic patient context with pharmacological knowledge. The system achieves a 49% reduction in false alerts while maintaining safety on the TwoSIDES benchmark.
+Implementation of NeuroSym-Rx, a temporal neurosymbolic framework for medication-safety decision support. The system integrates symbolic pharmacological reasoning with neural contextual analysis through a cascaded fusion mechanism with explicit coherence assessment.
 
 ## Dataset Information
-- **Name**: TwoSIDES
-- **Source**: Tatonetti Lab
-- **URL**:https://tatonettilab.org/resources/tatonetti-stm.html
-- **Filtering**: Interactions with count ≥5 and mean_ratio ≥1.5 (87,412 interactions)
+- **Source**: TwoSIDES (Tatonetti Lab)
+- **URL**: https://nsides.io/data/
+- **Filtering**: interactions with count ≥5 and mean PRR ≥1.5 (87,412 high-confidence interactions)
 
 ## Code Information
-- **Main script**: `evaluate_twosides_cv.py`
-- **Functionality**: 
-  - 5-fold stratified cross-validation
-  - Cascaded neurosymbolic fusion with conflict resolution
-  - Multi-horizon temporal memory simulation
-  - Clinically adaptive risk scoring
+- **Main entry point**: `evaluate_twosides_cv.py`
+- **Core modules**: `core/` package containing symbolic layer, neural layer, temporal memory, cascaded fusion, patient generator, and DrugBank baseline
+- **Rules**: 60 high-severity pharmacological rules in `data/rules_data.json`
 
 ## Usage Instructions
-1. Download TwoSIDES from https://tatonettilab.org/resources/tatonetti-stm.html
-2. Run: `python evaluate_twosides_cv.py`
-3. Output: `figures/figure3_pr_curve.pdf`, `figures/figure4_roc_curve.pdf`
+1. (Optional) Download TwoSIDES from https://nsides.io/data/ and place `twosides_filtered.csv` in `data/`
+2. Install dependencies: `pip install -r requirements.txt`
+3. (Optional) Set LLM API key: `export OPENAI_API_KEY=your_key`
+4. Run evaluation: `python evaluate_twosides_cv.py`
+
+Without TwoSIDES data, the script uses a synthetic benchmark for reproducibility. Without an API key, the neural layer uses a deterministic fallback.
 
 ## Requirements
-- Python 3.13
-- Libraries: numpy, pandas, scikit-learn, matplotlib, seaborn
+- Python 3.10+
+- numpy, pandas, scikit-learn, openai, requests
 
 ## Methodology
-1. Simulate realistic TwoSIDES predictions with deterministic seed
-2. Perform 5-fold CV with perturbations
-3. Generate PR/ROC curves with ±1 std bands
-4. Compute metrics: F1=0.83±0.01, AUC=0.94±0.01
+1. Symbolic layer: 60 high-severity rules with deterministic risk computation
+2. Neural layer: LLM-based contextual risk via API (BioMistral-7B / GPT-4)
+3. Temporal memory: multi-horizon vectorial storage (short/medium/long term)
+4. Cascaded fusion: coherence-based strategy selection with symbolic fallback
+5. Patient-specific modifiers: age, renal function, polypharmacy
 
 ## License
 MIT License
